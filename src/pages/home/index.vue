@@ -9,7 +9,7 @@ const store = userNumStore();
 
 const clickButton = () => {
   console.log("12312312123");
-  store.message = "nihaoaaaa";
+  store.message = "nihaoaaaa123123123";
 };
 
 const buttonClick = () => {
