@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    // ... 其他配置
+    "baseUrl": ".", // 基础路径（通常为项目根目录）
+    "paths": {
+      // 关键：与 Vite 别名保持一致，@/* 对应 src/*
+      "@/*": ["src/*"] 
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"] // 确保包含 src 下的文件
+}
