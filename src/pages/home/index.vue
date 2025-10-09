@@ -5,6 +5,7 @@
 
 <script setup lang="ts">
 import { userNumStore } from "@/store/index";
+import { onMounted } from "vue";
 const store = userNumStore();
 
 const clickButton = () => {
@@ -15,6 +16,10 @@ const clickButton = () => {
 const buttonClick = () => {
   store.increment();
 };
+
+onMounted(() => {
+  console.log(import.meta.env);
+});
 </script>
 
 <style scoped lang="scss">

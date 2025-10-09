@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     // ... 其他配置
+    "module": "ESNext", // 支持最新 ES 模块特性（包括 import.meta）
+    "moduleResolution": "bundler", // 适配 Vite 等构建工具的模块解析逻辑（Vite 推荐）
+    "target": "ESNext", // 目标代码版本（建议与 module 匹配）
     "baseUrl": ".", // 基础路径（通常为项目根目录）
     "paths": {
       // 关键：与 Vite 别名保持一致，@/* 对应 src/*
-      "@/*": ["src/*"] 
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"] // 确保包含 src 下的文件
