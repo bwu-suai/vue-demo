@@ -22,7 +22,7 @@ const routes: RouteRecordRaw[] = [
 // 创建路由实例
 const router = createRouter({
   // 历史模式：createWebHistory (HTML5 模式，无 #)；createWebHashHistory (哈希模式，带 #)
-  history: createWebHashHistory(), // BASE_URL 从 .env 文件获取（默认为 '/'）
+  history: createWebHashHistory(import.meta.env.BASE_URL), // BASE_URL 从 .env 文件获取（默认为 '/'）
   routes, // 路由规则
 });
 
