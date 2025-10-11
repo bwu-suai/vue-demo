@@ -5,16 +5,14 @@
 
 <script setup lang="ts">
 import { userNumStore } from "@/store/index";
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
 const store = userNumStore();
+const route = useRoute();
 
-const clickButton = () => {
-  console.log("12312312123");
-  store.message = "nihaoaaaa";
-};
-
-const buttonClick = () => {
-  store.increment();
-};
+onMounted(() => {
+  console.log(route.query.hahah);
+});
 </script>
 
 <style scoped lang="scss">
