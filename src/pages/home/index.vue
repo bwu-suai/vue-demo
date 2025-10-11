@@ -27,7 +27,7 @@ const clickButton = () => {
 
 const setHelloNum = () => {
   helloworld.value.num = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
-  helloworld.value.objData.name = "123123";
+  helloworld.value.objData.name = "1231233333";
 };
 
 onMounted(() => {
@@ -36,7 +36,7 @@ onMounted(() => {
 });
 
 const goSortFun = () => {
-  route.push("/sort?hahah=就是这样的哈哈哈哈");
+  route.push("/sort?hahah=就是这样的哈哈哈哈1111");
 };
 </script>
 
