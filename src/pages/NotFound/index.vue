@@ -11,4 +11,17 @@ const goHomepage = () => {
   route.replace("/");
 };
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+button {
+  padding: 8px 5px;
+  box-sizing: border-box;
+  background-color: #019dff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
