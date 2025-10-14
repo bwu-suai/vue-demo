@@ -5,6 +5,10 @@
     <div>这个是我的num：{{ num }}</div>
 
     <button @click="invokeParent">我调用父组件方法</button>
+
+    <div>
+      <el-button>去微软上课</el-button>
+    </div>
   </div>
 </template>
 

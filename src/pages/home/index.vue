@@ -5,7 +5,6 @@
 
     <button class="marginB" @click="clickButton">点击我store.count++</button>
     <button class="marginB" @click="setHelloNum">点击我子组件num变化</button>
-
     <div>
       <button class="marginB" @click="goSortFun()">点击跳转sort</button>
     </div>
