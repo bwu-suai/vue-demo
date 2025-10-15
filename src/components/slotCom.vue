@@ -8,6 +8,14 @@
         <input type="text" name="username" placeholder="hahaahha" />
       </div>
 
+      <div class="formView">
+        <select name="selectname">
+          <option value="1">1231231</option>
+          <option value="2">qwert</option>
+          <option value="3">asdfgf</option>
+          <option value="4">zxcvb</option>
+        </select>
+      </div>
       <button type="submit">提交</button>
     </form>
   </div>
@@ -20,9 +28,11 @@ const formRef = useTemplateRef("formRef");
 
 const submitFn = () => {
   const formData = new FormData(formRef.value);
- const username = formData.get('username');
+  const username = formData.get("username");
+  const selectname = formData.get("selectname");
 
   console.log(username);
+  console.log(selectname);
 };
 </script>
 
@@ -41,6 +51,24 @@ const submitFn = () => {
     border-radius: 8px;
     padding: 5px 10px;
     box-sizing: border-box;
+    margin-bottom: 10px;
+
+    select {
+      width: 100%;
+
+      option {
+        width: 100%;
+        background-color: #eee;
+
+        :active {
+          background-color: red;
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+    }
   }
 
   button {
