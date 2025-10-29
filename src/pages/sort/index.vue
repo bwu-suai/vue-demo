@@ -6,6 +6,11 @@
     <slotCom>
       <div class="mySlot">我是插槽哈哈哈哈</div>
     </slotCom>
+
+    <div :style="{ margin: `30px 0` }">
+      <div class="backClass" @click="fetchNum()">num++</div>
+      <div>{{ num }}</div>
+    </div>
   </div>
 </template>
 
@@ -14,9 +19,11 @@ import { userNumStore } from "@/store/index";
 import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import slotCom from "@/components/slotCom.vue";
+import { useSetQuantity } from "@/mixin/commonMixin";
 const store = userNumStore();
 const route = useRoute();
 const router = useRouter();
+const { num, fetchNum } = useSetQuantity();
 
 onMounted(() => {
   console.log(route.query.hahah);

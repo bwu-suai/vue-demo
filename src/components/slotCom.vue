@@ -18,11 +18,16 @@
       </div>
       <button type="submit">提交</button>
     </form>
+
+    <div>{{ num }}</div>
+    <button @click="fetchNum">num++</button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useTemplateRef } from "vue";
+import { useSetQuantity } from "@/mixin/commonMixin";
+const { num, fetchNum } = useSetQuantity();
 
 const formRef = useTemplateRef("formRef");
 
