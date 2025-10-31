@@ -53,6 +53,7 @@ provide("homeParent", {
 <style scoped lang="scss">
 .homeBigbox {
   width: 100%;
+  height: calc(100vh + 300px);
   display: flex;
   flex-direction: column;
   align-items: center;

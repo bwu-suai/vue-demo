@@ -5,12 +5,16 @@
     <div class="backClass" @click="goback()">返回</div>
     <slotCom>
       <div class="mySlot">我是插槽哈哈哈哈</div>
+      <div>{{ store.count }}</div>
+      <div>{{ store.doubleCount }}</div>
     </slotCom>
 
     <div :style="{ margin: `30px 0` }">
-      <div class="backClass" @click="fetchNum()">num++</div>
+      <div class="backClass" @click.prevent="fetchNum()">num++</div>
       <div>{{ num }}</div>
     </div>
+
+    <el-button @click="logcount()" type="primary">当前store * 2</el-button>
   </div>
 </template>
 
@@ -31,6 +35,10 @@ onMounted(() => {
 
 const goback = () => {
   router.back();
+};
+
+const logcount = () => {
+  store.count++;
 };
 </script>
 

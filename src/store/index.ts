@@ -5,7 +5,7 @@ export const userNumStore = defineStore("userNumStore", {
   state: () => ({
     count: 0,
     message: "Hello Pinia",
-    msg: '哈哈哈哈哈哈'
+    msg: "哈哈哈哈哈哈",
   }),
 
   // 计算属性（类似组件的 computed）
@@ -13,8 +13,8 @@ export const userNumStore = defineStore("userNumStore", {
     // 基于 state 计算
     doubleCount: (state) => state.count * 2,
     // 使用 this 访问其他 getters（需指定返回值类型）
-    doubleCountPlusOne(): number {
-      return this.doubleCount + 1;
+    doubleCountPlusOne(state): number {
+      return state.count + 1;
     },
   },
 

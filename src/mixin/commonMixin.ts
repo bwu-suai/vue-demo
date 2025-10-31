@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-export function useSetQuantity() {
+export const useSetQuantity = () => {
   const num = ref(0);
 
   const fetchNum = () => {
@@ -8,4 +8,4 @@ export function useSetQuantity() {
   };
 
   return { num, fetchNum };
-}
+};
